@@ -14,6 +14,7 @@ app.get("/", async (req, res) => {
    const data = await Pool.query('SELECT * FROM books').catch(e=>console.log(e.message))
    //console.log(info.rows)
    //res.send('Running')
+   console.log(data)
    res.json(data)
 });
 
