@@ -11,10 +11,10 @@ const port = process.env.PORT || 3001;
 //app.get("/", (req, res) => res.type('html').send(html));
 
 app.get("/", async (req, res) => {
-   const info = await Pool.query('SELECT * FROM books').catch(e=>console.log(e.message))
+   const data = await Pool.query('SELECT * FROM books').catch(e=>console.log(e.message))
    //console.log(info.rows)
    //res.send('Running')
-   res.json(info.rows)
+   res.json(data)
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
