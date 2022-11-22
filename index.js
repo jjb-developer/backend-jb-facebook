@@ -2,11 +2,13 @@
 
 
 import express from 'express'
+import cors from 'cors'
 import { Pool } from './db.js'
 //import * as dotenv from 'dotenv'
 //dotenv.config()
 const app = express();
 const port = process.env.PORT || 3001;
+app.use(cors({ origin:'*', methods:'GET'}))
 
 //app.get("/", (req, res) => res.type('html').send(html));
 
@@ -14,7 +16,7 @@ app.get("/", async (req, res) => {
    const data = await Pool.query('SELECT * FROM books').catch(e=>console.log(e.message))
    //console.log(info.rows)
    //res.send('Running')
-   console.log(data)
+   //console.log(data)
    res.json(data)
 });
 
