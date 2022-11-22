@@ -3,8 +3,8 @@
 
 import express from 'express'
 import { Pool } from './db.js'
-import * as dotenv from 'dotenv'
-dotenv.config()
+//import * as dotenv from 'dotenv'
+//dotenv.config()
 const app = express();
 const port = process.env.PORT || 3001;
 
