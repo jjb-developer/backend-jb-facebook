@@ -8,10 +8,7 @@ import { Pool } from './db.js'
 //dotenv.config()
 const app = express();
 const port = process.env.PORT || 3001;
-app.use(cors({
-   origin:['https://jb-facebook.netlify.app/'],
-   methods: ['GET','POST','PUT','DELETE']
-}))
+//app.use(cors({ origin:'https://jb-facebook.netlify.app/', methods: 'GET'}))
 
 //app.get("/", (req, res) => res.type('html').send(html));
 
