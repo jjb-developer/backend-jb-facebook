@@ -9,8 +9,8 @@ import { Pool } from './db.js'
 const app = express();
 const port = process.env.PORT || 3001;
 app.use(cors({
-   origin:['https://jb-facebook.netlify.app/','https://127.0.0.1:3001'],
-   methods: ['GET','POST','PUT']
+   origin:['https://jb-facebook.netlify.app/'],
+   methods: ['GET','POST','PUT','DELETE']
 }))
 
 //app.get("/", (req, res) => res.type('html').send(html));
