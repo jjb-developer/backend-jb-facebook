@@ -9,12 +9,12 @@ import { Pool } from './db.js'
 const app = express();
 const port = process.env.PORT || 3001;
 const options = {
-   origin:'https://jb-facebook.netlify.app/',
+   origin:'https://jb-facebook.netlify.app',
    methods: ['GET'],
    credentials: true
 }
 
-app.use(cors(options))
+app.use(cors())
 
 //app.get("/", (req, res) => res.type('html').send(html));
 
